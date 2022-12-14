@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>girl jumping dupe</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: pink;
+        }
+
+        #chara{
+            background-image: url(/images/spritesheet\ \(1\).png);
+            width: 416px;
+            height: 454px;
+            
+            animation: gAnimation 1.5s steps(30) infinite, gWalk 1.5s linear infinite;
+        }
+
+        @keyframes gAnimation {
+            0%{
+                background-position: 0px;
+            }
+
+            100%{
+                background-position: 12480px;
+            }
+        }
+
+        @keyframes gWalk {
+            0%{
+                transform: translateX(0px);
+                transform: translateY(300px);
+            }
+
+            50%{
+                transform: translate(500px, 0px);
+            }
+
+            100%{
+                transform: translate(1000px, 300px);
+            } 
+        }
+
+        #log{
+            background-image: url("/images/wood-log.png");
+            width: auto;
+            background-repeat: no-repeat;
+            scale: .3;
+            margin: 0;
+            padding: 0;
+
+            transform: translate(250px, 180px);
+        }
+    </style>
+</head>
+<body>
+    <div id="chara"></div>
+
+    <div id="log"><img src="/images/wood-log.png" alt="A wood log"></div>
+</body>
+</html>
